@@ -25,7 +25,7 @@ return new class extends Migration
         //
         Schema::table('todos', function (Blueprint $table) {
             $table->integer('priority')->default(0)->after('assigned_to');
-            $table->float('difficulty_level')->default(0)->after('priority');
+            $table->float('difficulty_level')->default(0)->after('priority')->nullable();
         });
     }
 };

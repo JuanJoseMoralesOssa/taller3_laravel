@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('todos', function (Blueprint $table) {
-            $table->float('difficulty_level')->default(0)->after('priority');
+            $table->float('difficulty_level')->default(0)->after('priority')->nullable();
         });
     }
 
